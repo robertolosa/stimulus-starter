@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --mode=development --watch --color"
+    "start": "webpack --mode=development --watch --color",
+    "build": "webpack --mode=production --color"
   },
   "author": "",
   "license": "ISC",
