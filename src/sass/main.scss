@@ -12,12 +12,37 @@ body {
   min-height: 100vh;
 }
 
+main {
+  backface-visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  visibility: hidden;
+
+  html.is-loaded & {
+    backface-visibility: visible;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 h1 {
   margin: 0;
 }
 
 img {
   margin-top: 30px;
+}
+
+.preloader {
+  left: 50%;
+  position: fixed;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+}
+
+.preloader__number {
+  color: red;
+  font-size: 40px;
 }
 
 nav {

@@ -27,5 +27,8 @@
     "terser-webpack-plugin": "^5.3.7",
     "webpack": "^5.79.0",
     "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "gsap": "^3.11.5"
   }
 }
