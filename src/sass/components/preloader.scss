@@ -1,0 +1,11 @@
+.preloader {
+  left: 50%;
+  position: fixed;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+}
+
+.preloader__number {
+  color: red;
+  font-size: 40px;
+}

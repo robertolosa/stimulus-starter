@@ -38,8 +38,8 @@ export default class Preloader extends EventEmitter {
       this.animateOut = GSAP.timeline()
 
       this.animateOut.to(this.preloaderNumber, {
-        delay: 0.3,
-        duration: 0.5,
+        delay: 0.1,
+        duration: 0.3,
         ease: "expo.out",
         autoAlpha: 0,
       })

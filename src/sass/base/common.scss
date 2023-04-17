@@ -1,0 +1,36 @@
+body {
+  align-items: center;
+  background: url(../assets/pattern.jpeg) repeat;
+  color: blue;
+  display: flex;
+  flex-direction: column;
+  font-family: "DM Sans", sans-serif;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  text-align: center;
+}
+
+main {
+  backface-visibility: hidden;
+  margin-top: var(--header-height);
+  opacity: 0;
+  padding: 50px 0;
+  transition: opacity 0.3s ease;
+  visibility: hidden;
+
+  body.is-loaded & {
+    backface-visibility: visible;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+img {
+  margin-top: 30px;
+}

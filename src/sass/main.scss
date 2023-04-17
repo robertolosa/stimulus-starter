@@ -1,71 +1,12 @@
-@import "fontello";
+@import "./base/reset";
 
-body {
-  align-items: center;
-  background: url(../assets/pattern.jpeg) repeat;
-  color: blue;
-  display: flex;
-  flex-direction: column;
-  font-family: "DM Sans", sans-serif;
-  justify-content: center;
-  margin: 0;
-  min-height: 100vh;
-}
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/shared";
 
-main {
-  backface-visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  visibility: hidden;
+@import "./base/fontello";
+@import "./base/vendors";
+@import "./base/base";
+@import "./base/common";
 
-  html.is-loaded & {
-    backface-visibility: visible;
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-h1 {
-  margin: 0;
-}
-
-img {
-  margin-top: 30px;
-}
-
-.preloader {
-  left: 50%;
-  position: fixed;
-  transform: translateX(-50%) translateY(-50%);
-  top: 50%;
-}
-
-.preloader__number {
-  color: red;
-  font-size: 40px;
-}
-
-nav {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  left: 0;
-  padding: 50px 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-
-  a {
-    color: #000;
-    font-size: 35px;
-    text-decoration: none;
-
-    &:not(:last-child) {
-      margin-right: 50px;
-    }
-
-    &[aria-page="current"] {
-      color: blue;
-    }
-  }
-}
+@import "./components/preloader";

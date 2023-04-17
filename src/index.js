@@ -4,6 +4,9 @@ import StimulusControllerResolver from "stimulus-controller-resolver"
 const application = Application.start()
 
 //Load crucial controllers
+import ScrollerController from "./controllers/scroller-controller.js"
+application.register("scroller-controller", ScrollerController)
+
 import MainController from "./controllers/main-controller.js"
 application.register("main-controller", MainController)
 

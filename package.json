@@ -29,6 +29,8 @@
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
-    "gsap": "^3.11.5"
+    "gsap": "^3.11.5",
+    "locomotive-scroll": "github:robertolosa/lsv-locomotive-scroll",
+    "vanilla-lazyload": "^17.8.3"
   }
 }

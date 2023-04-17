@@ -4,6 +4,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- <style>
+      @Html.Raw(Support.GetCssContent("/dist/critical.css"));
+    </style> -->
     <link rel="stylesheet" href="dist/main.css" />
     <script src="dist/main.js" defer></script>
   </head>
@@ -13,17 +16,34 @@
         <p>0%</p>
       </div>
     </div>
-    <main>
-      <nav>
-        <a href="index.html" aria-page="current">Home</a>
-        <a href="about.html">About us</a>
-      </nav>
-      <h1>Homepage <span class="icon-emo"></span></h1>
-      <img src="images/image-1.jpg" width="500" alt="" />
-      <img src="images/image-2.jpg" width="500" alt="" />
-      <img src="images/image-3.jpg" width="500" alt="" />
-      <img src="images/image-4.jpg" width="500" alt="" />
-      <img src="images/image-5.jpg" width="500" alt="" />
-    </main>
+    <nav>
+      <a href="index.html" aria-page="current">Home</a>
+      <a href="about.html">About us</a>
+    </nav>
+    <div class="scroller" data-scroll-container data-controller="scroller">
+      <main>
+        <h1>Homepage <span class="icon-emo"></span></h1>
+        <div class="images">
+          <div class="image">
+            <img src="images/image-1.jpg" width="500" alt="" />
+          </div>
+          <div class="image">
+            <img src="images/image-2.jpg" width="500" alt="" />
+          </div>
+          <div class="image">
+            <img src="images/image-3.jpg" width="500" alt="" />
+          </div>
+          <div class="image">
+            <img class="lazy" data-src="images/image-4.jpg" width="500" alt="" />
+          </div>
+          <div class="image">
+            <img class="lazy" data-src="images/image-5.jpg" width="500" alt="" />
+          </div>
+          <div class="image">
+            <img class="lazy" data-src="images/image-1.jpg" width="500" alt="" />
+          </div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

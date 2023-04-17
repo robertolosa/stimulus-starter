@@ -1,0 +1,25 @@
+nav {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  height: var(--header-height);
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  a {
+    color: #000;
+    font-size: 35px;
+    text-decoration: none;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    &[aria-page="current"] {
+      color: blue;
+    }
+  }
+}
