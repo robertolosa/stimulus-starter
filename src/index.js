@@ -1,10 +1,10 @@
 import { Application } from "@hotwired/stimulus"
 import StimulusControllerResolver from "stimulus-controller-resolver"
-import MainController from "./controllers/main-controller.js"
 
 const application = Application.start()
 
 //Load crucial controllers
+import MainController from "./controllers/main-controller.js"
 application.register("main-controller", MainController)
 
 //Load other controllers lazily

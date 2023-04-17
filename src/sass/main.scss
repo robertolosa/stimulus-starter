@@ -6,16 +6,41 @@ body {
   color: blue;
   display: flex;
   flex-direction: column;
+  font-family: "DM Sans", sans-serif;
   justify-content: center;
   margin: 0;
   min-height: 100vh;
 }
 
 h1 {
-  font-family: "DM Sans", sans-serif;
   margin: 0;
 }
 
 img {
   margin-top: 30px;
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  padding: 50px 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  a {
+    color: #000;
+    font-size: 35px;
+    text-decoration: none;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    &[aria-page="current"] {
+      color: blue;
+    }
+  }
 }
