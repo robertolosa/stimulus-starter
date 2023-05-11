@@ -1,14 +1,15 @@
 import { Controller } from "@hotwired/stimulus"
 import LazyLoad from "vanilla-lazyload"
-import Preloader from "../classes/Preloader.js"
 
 export default class extends Controller {
   connect() {
     this.element[this.identifier] = this
 
-    this.lazy()
+    if (!document.querySelector(".preloader")) {
+      document.body.classList.add("is-loaded")
+    }
 
-    this.createPreloader()
+    this.lazy()
   }
 
   /*Utility functions*/
@@ -70,15 +71,5 @@ export default class extends Controller {
       class_loaded: "is-loaded",
       use_native: true,
     })
-  }
-
-  createPreloader() {
-    this.preloader = new Preloader()
-    this.preloader.once("completed", this.onPreloaded.bind(this))
-  }
-
-  onPreloaded() {
-    this.preloader.destroy()
-    document.body.classList.add("is-loaded")
   }
 }

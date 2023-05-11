@@ -1,8 +1,13 @@
 .preloader {
+  display: none;
   left: 50%;
   position: fixed;
   transform: translateX(-50%) translateY(-50%);
   top: 50%;
+
+  &.is-running {
+    display: block;
+  }
 }
 
 .preloader__number {
