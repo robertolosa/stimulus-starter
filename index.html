@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
   <head>
     <!-- prevent FOUC -->
     <style type="text/css">
@@ -7,21 +7,29 @@
         display: none;
       }
     </style>
+    <title>Stimulus Starter</title>
+    <meta name="description" content="Starter for stimulusjs apps" />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      media="print"
+      onload="this.onload=null;this.removeAttribute('media');"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+    />
     <!-- <style>
       @Html.Raw(Support.GetCssContent("/dist/critical.css"));
     </style> -->
-    <link rel="stylesheet" href="dist/main.css" />
+    <link rel="preload" href="dist/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="dist/main.css" /></noscript>
     <script src="dist/main.js" defer></script>
   </head>
   <body data-controller="main scroller page-home">
     <nav>
-      <a href="index.html" aria-page="current">Home</a>
+      <a href="index.html" aria-current="page">Home</a>
       <a href="about.html">About us</a>
     </nav>
     <main>

@@ -1,6 +1,6 @@
 nav {
   align-items: center;
-  background-color: #fff;
+  background-color: #eee;
   display: flex;
   height: var(--header-height);
   justify-content: center;
@@ -21,7 +21,7 @@ nav {
       margin-right: 50px;
     }
 
-    &[aria-page="current"] {
+    &[aria-current="page"] {
       color: blue;
     }
   }
