@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="dist/main.css" />
     <script src="dist/main.js" defer></script>
   </head>
-  <body data-controller="main page-home">
+  <body data-controller="main scroller page-home">
     <div class="preloader" data-controller="preloader">
       <div class="preloader__number">
         <p>0%</p>
@@ -20,30 +20,28 @@
       <a href="index.html" aria-page="current">Home</a>
       <a href="about.html">About us</a>
     </nav>
-    <div class="scroller" data-scroll-container data-controller="scroller">
-      <main>
-        <h1>Homepage <span class="icon-emo"></span></h1>
-        <div class="images">
-          <div class="image">
-            <img src="images/image-1.jpg" width="500" alt="" />
-          </div>
-          <div class="image">
-            <img src="images/image-2.jpg" width="500" alt="" />
-          </div>
-          <div class="image">
-            <img src="images/image-3.jpg" width="500" alt="" />
-          </div>
-          <div class="image">
-            <img class="lazy" data-src="images/image-4.jpg" width="500" alt="" />
-          </div>
-          <div class="image">
-            <img class="lazy" data-src="images/image-5.jpg" width="500" alt="" />
-          </div>
-          <div class="image">
-            <img class="lazy" data-src="images/image-1.jpg" width="500" alt="" />
-          </div>
+    <main>
+      <h1>Homepage <span class="icon-emo"></span></h1>
+      <div class="images">
+        <div class="image">
+          <img src="images/image-1.jpg" width="500" alt="" />
         </div>
-      </main>
-    </div>
+        <div class="image">
+          <img src="images/image-2.jpg" width="500" alt="" />
+        </div>
+        <div class="image">
+          <img src="images/image-3.jpg" width="500" alt="" />
+        </div>
+        <div class="image">
+          <img class="lazy" data-src="images/image-4.jpg" width="500" alt="" />
+        </div>
+        <div class="image">
+          <img class="lazy" data-src="images/image-5.jpg" width="500" alt="" />
+        </div>
+        <div class="image">
+          <img class="lazy" data-src="images/image-1.jpg" width="500" alt="" />
+        </div>
+      </div>
+    </main>
   </body>
 </html>

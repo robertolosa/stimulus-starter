@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-import LocomotiveScroll from "locomotive-scroll"
+import Lenis from "@studio-freight/lenis"
 
 export default class extends Controller {
   connect() {
@@ -19,15 +19,16 @@ export default class extends Controller {
   }
 
   init() {
-    this.scrollerInstance = new LocomotiveScroll({
-      el: this.element,
-      smooth: true,
-      getDirection: true,
-      getSpeed: true,
-      reloadOnContextChange: true,
-    })
+    const _this = this
 
-    new ResizeObserver(() => this.scrollerInstance.update()).observe(this.element)
+    this.scrollerInstance = new Lenis()
+
+    function raf(time) {
+      _this.scrollerInstance.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
   }
 
   handleScrollScroller(obj) {}

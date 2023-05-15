@@ -4,17 +4,6 @@
   box-sizing: border-box;
 }
 
-html {
-  &.has-scroll-smooth {
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    position: fixed;
-    right: 0;
-    top: 0;
-  }
-}
-
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

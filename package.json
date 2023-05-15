@@ -29,8 +29,8 @@
     "webpack-cli": "^5.1.0"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.12",
     "gsap": "^3.11.5",
-    "locomotive-scroll": "github:robertolosa/lsv-locomotive-scroll",
     "vanilla-lazyload": "^17.8.3"
   }
 }

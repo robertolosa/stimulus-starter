@@ -1,15 +1,20 @@
-@import "locomotive-scroll/src/locomotive-scroll.scss";
-
-[data-scroll-container] {
-  html.has-scroll-smooth & {
-    overflow: hidden !important;
-  }
+//Lenis scroll
+html.lenis {
+  height: auto;
 }
 
-.c-scrollbar {
-  z-index: z("scrollbar");
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
 }
 
-.c-scrollbar_thumb {
-  opacity: 1;
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
