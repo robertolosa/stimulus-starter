@@ -6,7 +6,9 @@
   top: 50%;
 
   &.is-running {
-    display: block;
+    html.js & {
+      display: block;
+    }
   }
 }
 

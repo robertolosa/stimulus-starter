@@ -45,7 +45,7 @@ export default class extends Controller {
   }
 
   onAllAssetsLoaded() {
-    document.body.classList.add("is-loaded")
+    document.documentElement.classList.add("is-loaded")
     this.destroy()
   }
 

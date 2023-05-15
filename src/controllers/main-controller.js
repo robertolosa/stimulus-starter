@@ -5,8 +5,10 @@ export default class extends Controller {
   connect() {
     this.element[this.identifier] = this
 
+    // document.documentElement.classList.add("js")
+
     if (!document.querySelector(".preloader")) {
-      document.body.classList.add("is-loaded")
+      document.documentElement.classList.add("is-loaded")
     }
 
     this.lazy()

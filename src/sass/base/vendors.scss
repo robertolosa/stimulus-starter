@@ -1,20 +1,24 @@
 //Lenis scroll
-html.lenis {
-  height: auto;
-}
+html.js {
+  &.lenis {
+    height: auto;
 
-.lenis.lenis-smooth {
-  scroll-behavior: auto;
-}
+    &.lenis-smooth {
+      scroll-behavior: auto;
 
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
+      [data-lenis-prevent] {
+        overscroll-behavior: contain;
+      }
 
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
+      .lenis.lenis-stopped {
+        overflow: hidden;
+      }
+    }
 
-.lenis.lenis-scrolling iframe {
-  pointer-events: none;
+    &.lenis-scrolling {
+      iframe {
+        pointer-events: none;
+      }
+    }
+  }
 }
