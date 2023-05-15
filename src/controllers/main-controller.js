@@ -74,7 +74,7 @@ export default class extends Controller {
         gsap.to(element, {
           "-webkit-mask-image": "linear-gradient(-135deg, black 100%, transparent 200%)",
           opacity: 1,
-          delay: 0.5,
+          delay: 0.3,
           duration: 1,
         })
       },

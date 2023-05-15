@@ -12,11 +12,20 @@
     <meta name="format-detection" content="telephone=no" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+    /></noscript>
     <!-- <style>
       @Html.Raw(Support.GetCssContent("/dist/critical.css"));
     </style> -->
-    <link rel="stylesheet" href="dist/main.css" />
+    <link rel="preload" href="dist/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="dist/main.css" /></noscript>
     <script src="dist/main.js" defer></script>
   </head>
   <body data-controller="main scroller">
