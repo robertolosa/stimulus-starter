@@ -1,15 +1,12 @@
 import { Controller } from "@hotwired/stimulus"
+import { gsap } from "gsap"
 import LazyLoad from "vanilla-lazyload"
 
 export default class extends Controller {
   connect() {
     this.element[this.identifier] = this
 
-    // document.documentElement.classList.add("js")
-
-    if (!document.querySelector(".preloader")) {
-      document.documentElement.classList.add("is-loaded")
-    }
+    document.documentElement.classList.add("js", "is-loaded")
 
     this.lazy()
   }
@@ -68,10 +65,19 @@ export default class extends Controller {
 
   /*Common functions*/
   lazy() {
+    gsap.set(document.querySelectorAll(".lazy"), { opacity: 0 })
+
     this.lazyLoad = new LazyLoad({
       elements_selector: ".lazy",
       class_loaded: "is-loaded",
-      use_native: true,
+      callback_loaded: (element) => {
+        gsap.to(element, {
+          "-webkit-mask-image": "linear-gradient(-135deg, black 100%, transparent 200%)",
+          opacity: 1,
+          delay: 0.5,
+          duration: 1,
+        })
+      },
     })
   }
 }

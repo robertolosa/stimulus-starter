@@ -1,0 +1,21 @@
+.images {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.image {
+  height: 0;
+  margin-top: 30px;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+
+  > * {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
